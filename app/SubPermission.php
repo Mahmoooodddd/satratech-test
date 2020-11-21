@@ -8,7 +8,7 @@ class SubPermission extends Model
 {
     public function permission()
     {
-        return $this->belongsTo('App/Permission');
+        return $this->belongsTo('App\Permission');
     }
 
     public function pivotSubPerAdminUsers()

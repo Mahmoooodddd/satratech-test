@@ -17,3 +17,19 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/permissions','PermissionController@index');
+Route::post('/permission/create','PermissionController@create');
+Route::post('/permission/edit/{id}','PermissionController@edit');
+Route::delete('/permission/delete/{id}','PermissionController@delete');
+
+
+Route::get('/subPermissions','SubPermissionController@index');
+Route::post('/subPermission/create','SubPermissionController@create');
+Route::post('/subPermission/edit/{id}','SubPermissionController@edit');
+Route::delete('/subPermission/delete/{id}','SubPermissionController@delete');
+
+
+
+
+
